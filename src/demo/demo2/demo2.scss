@@ -1,0 +1,48 @@
+
+.demo2{
+    width: 1200px;
+    margin: 0 auto;
+    // background-color: pink;
+    height: 100%;
+    padding-top: 16px;
+}
+
+.preview{
+    width: 400px;
+    height: 400px;
+    background-color: firebrick;
+    position: relative;
+    border: 1px solid #9D9D9D;
+
+}
+
+.mask{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 200px;
+    background-color: goldenrod;
+    opacity: .5;
+    // 鼠標樣式
+    cursor: move;
+    display: none;
+}
+
+.big{
+    position: absolute;
+    left: 410px;
+    top: 0px;
+    width: 500px;
+    height: 500px;
+    background-color: forestgreen;
+    display: none;
+    overflow: hidden;
+    border: 1px solid #9D9D9D;
+}
+
+.imgB{
+    position: absolute;
+    left: 0;
+    top:0 ;
+}

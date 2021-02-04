@@ -1,0 +1,74 @@
+@use "sass:map";
+
+$theme-colors: (
+    "success": #28a745,
+    "info": #17a2b8,
+    "warning": #ffc107,
+);
+$color1:#FD1B3F;
+$h1Font: 28px;
+
+@function paddingTest($value){
+    @return $value*8px;
+}
+
+
+.main{
+    // background-color: darken($color1, 10%);
+    width: 100%;
+    font-size: $h1Font;
+    padding: paddingTest(2);
+    color: map-get($theme-colors, "success");
+
+    ul {
+        box-shadow: 0 8px 6px -6px black;
+        width: 800px;
+        height: 40px;
+        position: relative;
+
+        li{
+            color: #17a2b8;
+            font-size: 20px;
+            width: 200px;
+            font-weight: 900;
+            // background-color: map-get($theme-colors, "warning");
+            height: 42px;
+            float: left;
+            text-align: center;
+            line-height: 42px;
+            
+            a{
+                text-decoration: none;
+                height: 42px;
+                display: block;
+                color: #17a2b8;
+                
+                &:hover{
+                    border-bottom:2px solid orangered;
+                    color: orangered;
+                }
+
+                &:hover + .hovertest{
+                    display: block;
+                }
+            }
+
+            .hovertest{
+                height: 400px;
+                background-color: darken(#ffffff, 10%);
+                width: 800px;
+                display: none;
+                position: absolute;
+                left: 0;
+                
+                &:hover{
+                    display: block;
+                }
+                &:hover ~ .a1{
+                    border-bottom:2px solid orangered;
+                }
+            }
+        }
+    }
+}
+
