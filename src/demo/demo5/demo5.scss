@@ -1,0 +1,85 @@
+.demo5-main{
+  width: 1200px;
+  height: 1200px;
+  margin: 0 auto;
+  //background-color: #ffc107;
+  font-size: 26px;
+  font-weight: 800;
+  padding: 16px;
+  text-align: center;
+}
+
+.border-area{
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.border-test{
+  width: 25%;
+  height: 100%;
+  float: left;
+  border: 1px solid #9D9D9D;
+
+  &:hover{
+    background-color: #c5346d;
+  }
+  // 選中除了第一個元素
+  &:not(:first-child){
+    //background-color: #0D1F2D;
+    margin-left: -1px;
+  }
+}
+
+.border-radius{
+  overflow: hidden;
+  background-color: rgb(118, 218, 255);
+  align-items: center;
+  height: 400px;
+  margin-top: 16px;
+  position: relative;
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    min-width: 200vw;
+    min-height: 220vw;
+    background-color: #fff;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  &:before {
+    bottom: 15vh;
+    border-radius: 45%;
+    animation-duration: 10s;
+  }
+
+  &:after {
+    bottom: 10vh;
+    opacity: .5;
+    border-radius: 47%;
+    animation-duration: 10s;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, 0) rotateZ(0deg);
+  }
+  50% {
+    transform: translate(-50%, -2%) rotateZ(180deg);
+  }
+  100% {
+    transform: translate(-50%, 0%) rotateZ(360deg);
+  }
+}
+
+h2{
+  color: #333;
+  font-size: 6vw;
+  text-shadow: 3px 3px 2px #999;
+  z-index: 10;
+  position: relative;
+}
